@@ -218,7 +218,7 @@ const About = () => {
             </div>
           </div>
           <p className="text-2xl dark:bg-gray-800 inline-block p-3 mx-2 my-5">
-            More {pornstar.name}'s pictures
+            More {pornstar.name}&apos;s pictures
           </p>
           <div className="dark:bg-gray-800 p-3 max-w-6xl mx-auto grid  sm:grid-cols-2 md:grid-cols-3 gap-1">
             {pornstar.images.map((img, i) => {

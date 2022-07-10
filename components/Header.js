@@ -7,7 +7,7 @@ const Header = () => {
       <div className="capitalize  h-96  text-white  flex flex-col items-center justify-start  w-full   group  space-y-2 p-5">
         <div className=" space-y-4 ">
           <h1 className="font-serif text-transparent  bg-clip-text bg-gradient-to-r from-purple-700 to-green-600 text-3xl md:text-6xl font-extrabold  transition-colors duration-100 ease-in">
-            Get pornstar's info
+            Get pornstar&apos;s info
           </h1>
           <p className="md:text-2xl ">From the world means from <span className="text-4xl py-4 px-1  underline italic font-serif inline-block"> everywhere</span> </p>
 
