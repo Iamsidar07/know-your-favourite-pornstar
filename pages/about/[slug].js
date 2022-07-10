@@ -18,7 +18,7 @@ const About = () => {
   let str = slug;
   let strArray = str?.split("-");
   let id=8; 
-   if (strArray.length!=0) {
+   if (strArray!=undefined) {
      strArray[strArray?.length - 1];
   }
   useEffect(() => {
