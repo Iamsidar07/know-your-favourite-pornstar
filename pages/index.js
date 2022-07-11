@@ -16,12 +16,11 @@ export default function Home() {
 
   useEffect(() => {
     const getData = async () => {
-      const res = await fetch(
-        "https://papi-pornstarsapi.p.rapidapi.com/pornstars/",
-        options
-      );
-      const data = await res.json();
-      setData(data);
+      fetch(`https://papi-pornstarsapi.p.rapidapi.com/pornstars/`, options)
+      .then((response) => response.json())
+      .then((response) => setData(response))
+      .catch((err) => console.error(err));
+     
     };
     getData();
   }, []);

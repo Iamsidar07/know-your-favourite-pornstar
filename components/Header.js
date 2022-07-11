@@ -10,7 +10,7 @@ const Header = () => {
             Get pornstar&apos;s info
           </h1>
           <p className="md:text-2xl ">From the world means from <span className="text-4xl py-4 px-1  underline italic font-serif inline-block"> everywhere</span> </p>
-
+          <p className=" text-3xl inline-block text-sky-500 bg-gray-700 md:text-6xl font-bold font-serif p-2 ">M <span>(●'◡'●)</span> </p>
           {/* <button className="mt-6 rounded  bg-[#334155]  hover:scale-105 transition-all duration-100 ease-in  hover:bg-[#334155eb] text-white  py-3 px-6  inline-flex items-center">
             get more
           </button> */}
