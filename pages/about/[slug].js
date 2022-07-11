@@ -17,9 +17,11 @@ const About = () => {
   };
   let str = slug;
   let strArray = str?.split("-");
-  let id=8; 
+  let id; 
    if (strArray!=undefined) {
-     strArray[strArray?.length - 1];
+     id=strArray[strArray?.length - 1];
+  }else{
+    id="8";
   }
   useEffect(() => {
     fetch(`https://papi-pornstarsapi.p.rapidapi.com/pornstars/${id}/`, options)
@@ -27,7 +29,7 @@ const About = () => {
       .then((response) => setPornstar(response))
       .catch((err) => console.error(err));
   }, [id]);
-
+  
   return (
     <>
       {pornstar ? (
