@@ -11,7 +11,7 @@ const Info = ({ url, name, age, nationality, slug }) => {
           layout="responsive"
           width={530}
           height={600}
-          className="rounded-t-sm group-hover:rounded-t-sm cursor-pointer group-hover:scale-110 transition-all duration-100 ease-in bg-slate-100 "
+          className="rounded-t-sm group-hover:rounded-t-sm cursor-pointer group-hover:scale-110 transition-all duration-100 ease-in bg-gray-500 "
         />
 
         <h5 className="p-1 group-hover:text-blue-500 mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">

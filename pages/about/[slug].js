@@ -234,7 +234,7 @@ const About = () => {
                     width={530}
                     height={600}
                     quality={100}
-                    className="max-w-full h-auto  dark:bg-gray-700 rounded-t-sm hover:rounded-t-sm hover:scale-125 transition-all duration-100 ease-in"
+                    className="max-w-full h-auto  bg-gray-700 rounded-t-sm hover:rounded-t-sm hover:scale-125 transition-all duration-100 ease-in"
                   />
                 </div>
               );
