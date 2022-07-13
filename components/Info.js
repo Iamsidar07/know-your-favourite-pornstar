@@ -1,25 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 const Info = ({ url, name, age, nationality, slug }) => {
   return (
     <Link href={`/about/${slug}`}>
-      <div className="max-w-sm group rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+      <div className="md:max-w-sm group rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
         <Image
           alt="Mountains"
           src={url}
           layout="responsive"
           width={530}
           height={600}
+          objectFit="cover"
           className="rounded-t-sm group-hover:rounded-t-sm cursor-pointer group-hover:scale-110 transition-all duration-100 ease-in bg-gray-500 "
         />
 
-        <h5 className="p-1 group-hover:text-blue-500 mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+        <h5 className="p-1 group-hover:text-blue-500 md:mb-2 text-lg md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           {name},{age}
         </h5>
 
         <div className="flex p-1 items-center full justify-between">
-          <p className="mb-3  font-normal text-gray-700 dark:text-gray-400">
+          <p className="md:mb-3  font-normal text-gray-700 dark:text-gray-400">
             {nationality}
           </p>
           <a

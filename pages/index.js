@@ -35,7 +35,7 @@ export default function Home() {
       {data ? (
         <>
           <Header />
-          <Pornstar pornstars={data.results} />
+          <Pornstar pornstars={data.results} next={data.next}/>
         </>
       ): <Loading/>
      }
