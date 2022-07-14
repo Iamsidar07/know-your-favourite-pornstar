@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 import Loading from "../../components/Loading";
+import { Fade } from "react-reveal";
 const About = () => {
   const [pornstar, setPornstar] = useState();
   const router = useRouter();
@@ -17,11 +18,11 @@ const About = () => {
   };
   let str = slug;
   let strArray = str?.split("-");
-  let id; 
-   if (strArray!=undefined) {
-     id=strArray[strArray?.length - 1];
-  }else{
-    id="8";
+  let id;
+  if (strArray != undefined) {
+    id = strArray[strArray?.length - 1];
+  } else {
+    id = "8";
   }
   useEffect(() => {
     fetch(`https://papi-pornstarsapi.p.rapidapi.com/pornstars/${id}/`, options)
@@ -29,13 +30,13 @@ const About = () => {
       .then((response) => setPornstar(response))
       .catch((err) => console.error(err));
   }, [id]);
-  
+
   return (
     <>
       {pornstar ? (
         <div className=" dark:border-gray-700 max-w-6xl  mx-auto text-white ">
           <Link href={"/"}>
-            <button className=" md:m-2 bg-blue-500 hover:bg-blue-700 text-white font-bold p-1 md:py-2 md:px-4 border border-blue-700 rounded-full">
+            <button className="m-1 md:m-2 bg-blue-500 hover:bg-blue-700 text-white font-bold p-1 md:py-2 md:px-4 border border-blue-700 rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
@@ -53,6 +54,7 @@ const About = () => {
             </button>
           </Link>
           <div className="flex flex-col md:flex-row items-center justify-between h-3/4  max-w-6xl">
+           <Fade bottom>
             <div className="flex  flex-col w-full md:w-1/2 border-r-2 border-gray-700">
               <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
                 <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
@@ -137,7 +139,9 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col w-full md:w-1/2 border-b-[1px] border-sky-500 md:border-none">
+           </Fade>
+           <Fade bottom>
+            <div className="flex flex-col w-full md:w-1/2 ">
               <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
                 <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
                   <div className="overflow-hidden">
@@ -221,13 +225,17 @@ const About = () => {
                 </div>
               </div>
             </div>
+           </Fade>
           </div>
-          <p className=" md:text-2xl  max-w-fit p-2 md:p-3 mx-auto md:mx-2 my-5">
+          <Fade left>
+          <p className="border-b-[1px] border-sky-500 md:border-none md:text-2xl  max-w-fit p-2 md:p-3 mx-auto md:mx-2 my-5">
             More from {pornstar.name}&apos;s pictures
           </p>
+          </Fade>
           <div className="md:p-3 max-w-6xl mx-auto grid  sm:grid-cols-2 md:grid-cols-3 gap-2">
             {pornstar.images.map((img, i) => {
               return (
+                <Fade bottom>
                 <div key={i} className="p-1 dark:bg-gray-800 rounded-md">
                   <Image
                     src={img.image}
@@ -239,6 +247,7 @@ const About = () => {
                     className="max-w-full h-auto rounded-t-sm hover:rounded-t-sm hover:scale-105 transition-all duration-100 ease-in"
                   />
                 </div>
+                </Fade>
               );
             })}
           </div>
