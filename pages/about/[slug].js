@@ -35,7 +35,7 @@ const About = () => {
       {pornstar ? (
         <div className=" dark:border-gray-700 max-w-6xl  mx-auto text-white ">
           <Link href={"/"}>
-            <button className=" md:m-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+            <button className=" md:m-2 bg-blue-500 hover:bg-blue-700 text-white font-bold p-1 md:py-2 md:px-4 border border-blue-700 rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
@@ -225,10 +225,10 @@ const About = () => {
           <p className=" md:text-2xl dark:bg-gray-800 max-w-fit p-2 md:p-3 mx-auto md:mx-2 my-5">
             More from {pornstar.name}&apos;s pictures
           </p>
-          <div className="p-1 md:p-3 max-w-6xl mx-auto grid  sm:grid-cols-2 md:grid-cols-3 gap-2">
+          <div className="md:p-3 max-w-6xl mx-auto grid  sm:grid-cols-2 md:grid-cols-3 gap-2">
             {pornstar.images.map((img, i) => {
               return (
-                <div key={i} className="p-2 dark:bg-gray-800 rounded-md">
+                <div key={i} className="p-1 dark:bg-gray-800 rounded-md">
                   <Image
                     src={img.image}
                     layout="responsive"
