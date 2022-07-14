@@ -222,7 +222,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          <p className=" md:text-2xl dark:bg-gray-800 max-w-fit p-2 md:p-3 mx-auto md:mx-2 my-5">
+          <p className=" md:text-2xl  max-w-fit p-2 md:p-3 mx-auto md:mx-2 my-5">
             More from {pornstar.name}&apos;s pictures
           </p>
           <div className="md:p-3 max-w-6xl mx-auto grid  sm:grid-cols-2 md:grid-cols-3 gap-2">
